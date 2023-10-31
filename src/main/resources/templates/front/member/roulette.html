@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{front/layouts/main}">
+<main layout:fragment="content">
+
+    <div class="rouletter">
+        <div class="rouletter-bg"><div class="rouletter-wacu"></div></div>
+        <div class="rouletter-arrow"></div>
+        <button class="rouletter-btn">start</button>
+
+    </div>
+    <script th:src="@{/front/js/roulette/roulette.js}"></script>
+
+</main>
+</html>

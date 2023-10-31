@@ -1,0 +1,258 @@
+/** 사이트 공통 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+* { box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; color: #000; outline: none; }
+html { font-size: 13px; }
+ul, ol { list-style: none; margin:0; padding:0; }
+dl, dt, dd { margin:0; padding: 0; }
+a { text-decoration: none; }
+body { margin: 0; }
+img { border: 0; }
+
+
+main { min-width: 1100px; min-height: 800px; display: flex; }
+main > aside { width: 208px; background: #596b99; }
+main > section { flex-grow: 1; margin: 0 50px; }
+
+
+aside li > a { display: block; height: 71px; line-height: 71px; border-top: 1px solid #61729e; color: #dddee4; font-size: 18px; text-align: center; position: relative; }
+aside li > a * { color: #dddee4; font-size: 18px; }
+aside li > a:hover,
+aside li > a.on { background: #3c4e7a; font-weight: bold; }
+aside li > a:hover:after,
+aside li > a.on:after { content: ''; display: block; position: absolute; width: 8px; height: 100%; right: 0; top: 0; background: #00d0d7; }
+
+/* 회원가입, 로그인, 로그아웃 버튼 */
+.sbtn { background: #fff; display: inline-block; border: 1px solid #596b99; color: #596b99; min-width: 90px; padding: 0 20px; height: 28px; line-height: 26px; text-align: center; border-radius: 5px; }
+.sbtn.blue { color: #fff; background:#596b99; }
+
+
+h1 { font-size: 30px; font-weight: bold; margin: 0; margin-bottom: 35px; line-height: 1; padding: 0; }
+h2 { font-size: 18px; font-weight: bold; margin: 25px 0 10px; line-height: 1; }
+
+
+
+
+/* header S  */
+
+/** header_top 부분 */
+.header_layout {
+    height: 300px; width: 100%;
+}
+.header_layout .headerTop {
+    background: #4591e6; width: 100%;
+}
+.header_layout .headerTop .headerTopContainer {
+    height: 36px; max-width: 1140px; margin: 0 auto;
+}
+.header_layout .headerTop .top_menu {
+    float: right; height: 36px line-height: 40px; text-align: left; padding: 0 12px;
+}
+.header_layout .headerTop .top_menu .menu_item {
+    font-weight: 400; color: #fff; cursor: pointer; line-height: 36px;
+}
+/* 로그인 O -> 사용자 환영 메세지 */
+#wel_message {
+    color: #fff; font-weight: 400; line-height: 36px;
+}
+
+.header_layout .search_field {
+    background: #4591e6; width: 100%;
+}
+.header_layout .headerTop .search_field {
+    height: 52px; max-width: 1140px; margin: 0 auto;
+}
+
+.search_field {
+    position: relative;
+}
+.search_field .searchbar {
+    position: absolute; right: 0; height: 41px;
+}
+.search {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.searchbar_1 {
+    padding-left: 15px;
+    padding-right: 350px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    border-color: #4591e6;
+    border-width: 3px;
+    border-radius: 10px;
+}
+.xi-search {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #4591e6;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* 중간 헤더 */
+.headerMiddle {
+    width: 100% height: 88px; display: flex; margin-top: 20px; justify-content: center;
+}
+.headerMiddle .headL {
+    width: 212px; height: 100%; flex-shrink: 0; font-size: 0px; margin: 0; padding: 0;
+    display: flex; align-items: center;
+}
+#logo img {
+    display: block; width: 100%; height: 100%; object_fit: contain; /* 이미지를 꽉 채우면서 비율 유지 */
+}
+
+
+
+/* bottom header */
+.headerBottom {
+    border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; height: 48px; margin: 0 auto; width: 100%; margin-top: 20px;
+}
+.headerBottom .view_list {
+    height: 48px; max-width: 1140px; margin: auto; position: relative;
+}
+.headerBottom .view_list .menu_bottom {
+    display: inline-block; height: inherit; vertical-align: middle;
+}
+.menu_item .menu_bts { color: #3083e2; font-size: 16px; font-weight: bold; cursor: pointer; line-height: 48px; }
+
+.view_list { display: flex; justify-content: space-between; }
+.menu_bottom { flex: 1; padding: 0 28px; box-sizing: border-box; }
+.menu_item { text-align: center; }
+.menu_bts { text-decoration: none; }
+
+/* 카테고리 */
+.headerBottom .view_list .menu_bottom .menu_item .all_categories {
+    background: #fff; border: 1px solid #EEE; display: none; cursor: default; position: absolute; line-height: 24px; min-height: 194px; width: 150px; padding: 15px; left: 0; right: 865px; margin: 0 auto; text-align: center; z-index: 999;
+}
+.headerBottom .view_list .menu_bottom .menu_item .all_categories .category {
+    height: 24px; padding-bottom: 10px;
+}
+
+.headerBottom .view_list .menu_bottom .menu_item .all_categories_event {
+    background: #fff; border: 1px solid #EEE; display: none; cursor: default; position: absolute; line-height: 30px; min-height: 100px; width: 100px; padding: 15px; left: 660px; margin: 0 auto; text-align: center; z-index: 999;
+}
+
+/* 마우스를 올릴때 동작 */
+.headerBottom .view_list .menu_bottom .menu_item:hover .all_categories {
+    display: block; /* 카테고리 보이도록 */
+}
+.headerBottom .view_list .menu_bottom .menu_item:hover .all_categories_event {
+    display: block;
+}
+.headerBottom .view_list .menu_bottom .menu_item:hover .category {
+    display: block;
+}
+.headerBottom .view_list .menu_bottom .menu_item .menu_bts:hover {
+    text-decoration: underline 4px solid yellow; /* 글자 밑에 밑줄 */
+}
+.headerBottom .view_list .menu_bottom .menu_item .category:hover {
+    text-decoration: underline 4px solid yellow; /* 글자 밑에 밑줄 */
+}
+
+/* header E  */
+
+/* event 부분 시작  */
+.icon-container {
+  text-align: center; margin: 50px auto; justify-content: center; display: inline-block
+}
+.icon-text{
+text-align: center;
+}
+.event
+text-align: center;
+background-image: url('#');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* 닫기 버튼 스타일 */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    /* event 부분 끝   */
+}
+
+/*룰렛 시작*/
+
+.rouletter {
+  position: absolute;
+  top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+
+
+}
+.rouletter-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  border-radius: 350px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.rouletter-wacu {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f2
+  url("https://m.lifeplanet.co.kr:444/commons/slink/administrator/openInnovation/img/MO)%20360%ED%94%8C%EB%9E%98%EB%8B%9B_%EB%A3%B0%EB%A0%9B%ED%8C%90_476x476_201026.png")
+  no-repeat;
+  background-size: 100%;
+  transform-origin: center;
+  transition-timing-function: ease-in-out;
+  transition: 2s;
+}
+.rouletter-arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 1px;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 40px solid red;
+  border-bottom: 0px solid transparent;
+
+}
+.rouletter-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  background: #fff;
+  border-image: linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
+  border: 2px solid;
+}
+.hidden-input {
+  display: none;
+  }
+
+
+
+
+
+
+
+
+
+

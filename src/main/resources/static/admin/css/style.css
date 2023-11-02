@@ -68,7 +68,7 @@ aside li > a.on:after { content: ''; display: block; position: absolute; width: 
 /** 기본 에러 메세지 스타일 */
 .errors { box-shadow: 2px 2px 5px #36466d; padding: 5px 15px; background: #fff; font-size: 12px; border-radius: 3px; margin-top: 5px; color: #61729e; }
 
-/** 기본 제목 스타일 */
+/** 게시판 목록 기본 제목 스타일 */
 h1 { font-size: 30px; font-weight: bold; margin: 0; margin-bottom: 35px; line-height: 1; padding: 0; }
 h2 { font-size: 18px; font-weight: bold; margin: 25px 0 10px; line-height: 1; }
 
@@ -87,7 +87,7 @@ h2 { font-size: 18px; font-weight: bold; margin: 25px 0 10px; line-height: 1; }
 
 .table-action { padding: 10px 0; border-bottom: 1px solid #d5d5d5; }
 
-/** 공통 서브 메뉴 */
+/** 공통 서브 메뉴 _submenu.html 부분 */
 nav.submenus { background: #fff; box-shadow: 1px 1px 5px #cdced5; margin-bottom: 30px; display: flex; height: 60px; }
 nav.submenus a.on { background: #596b99; color: #fff; }
 nav.submenus a { line-height: 60px; padding: 0 40px; font-size: 18px; }

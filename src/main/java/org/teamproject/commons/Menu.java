@@ -5,6 +5,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 2.서브메뉴 조회부분
+ */
+
 public class Menu {
     /**
      * 주어진 코드에 따라 메뉴 목록을 반환.
@@ -33,11 +37,17 @@ public class Menu {
             menus.add(new MenuDetail("cancel", "취소", "/admin/claim/cancel"));
             menus.add(new MenuDetail("change", "교환", "/admin/claim/change"));
             menus.add(new MenuDetail("takeBack", "반품", "/admin/claim/takeBack"));
-        }else if (code.equals("board")){// 게시판 하위 메뉴
+
+        // 3.게시판 하위 메뉴
+        }else if (code.equals("board")){
             menus.add(new MenuDetail("board", "게시판 목록", "/admin/board"));
             menus.add(new MenuDetail("register", "게시판 등록/수정", "/admin/board/register"));
             menus.add(new MenuDetail("posts", "게시글 관리", "/admin/board/posts"));
         }
+        /** 로직
+         * 게시판 하위 메뉴
+         * "게시판"과 같으면 code"게시판 목록", "게시판 등록/수정", "게시글 관리" 등 보드 시스템 관리를 위한 메뉴 항목을 해당 URL과 함께 "/admin/board"에 추가합니다.
+         */
 
         return menus;
     }

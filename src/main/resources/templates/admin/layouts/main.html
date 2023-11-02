@@ -28,6 +28,7 @@
     <aside th:replace="~{admin/outlines/_side::menu}"></aside>
     <section>
         <th:block th:replace="~{admin/commons/_submenu::menus}"></th:block>
+        <!--값만 넘겨주면 알아서 submenu로 교체할 수 있도록 로직-->
         <section layout:fragment="content"></section>
     </section>
 </main>
